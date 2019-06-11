@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:max-height="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Chat Application</title>
+      <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <noscript>
+      <h2>Sorry! Your browser doesn't support Javascript</h2>
+    </noscript>
+
+    <div id="select-chat-page" class="select-chat-page-class">
+        <div class="chat-container">
+            <h1 class="title">Select or create chat room</h1>
+            <ul id="chatArea">
+
+            </ul>
+            <form id="chatForm" name="chatForm">
+                <div class="form-group">
+                    <input type="text" id="chatName" placeholder="chatName" autocomplete="off" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="accent username-submit">CreateChat</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="username-page" class="hidden">
+        <div class="username-page-container">
+            <h1 class="title">Type your username</h1>
+            <form id="usernameForm" name="usernameForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="accent username-submit">Start Chatting</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="chat-page" class="hidden">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div>
+                    <h2 id="chat-header">Chat</h2>
+                </div>
+                <div>
+                    <form id="leaveChatForm" name="leaveChat">
+                        <button type="submit" class="primary">leave chat</button>
+                    </form>
+                </div>
+            </div>
+            <ul id="messageArea" height =calc(100% - 120px)>
+
+            </ul>
+            <form id="messageForm" name="messageForm" nameForm="messageForm">
+                <div class="form-group">
+                    <div class="input-group clearfix">
+                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                        <button type="submit" class="primary">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="users-container">
+            <div class="chat-header">
+                <div>
+                    <h2>Users</h2>
+                </div>
+            </div>
+            <ul id="usersArea">
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script defer src="https://npmcdn.com/@reactivex/rxjs@5.0.0-beta.7/dist/global/Rx.umd.js"></script>
+    <script defer src="/js/main.js"></script>
+  </body>
+</html>

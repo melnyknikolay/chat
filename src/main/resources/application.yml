@@ -1,0 +1,11 @@
+server:
+  port: 8097
+
+spring:
+  data:
+    mongodb:
+      database: chat
+      host: localhost
+      port: 27017
+      repositories:
+        type: auto
